@@ -12,7 +12,7 @@ export default function Home() {
         ></link>
       </Head>
 
-      <main className="relative h-screen w-full pb-[100px]">
+      <main className="relative min-h-screen w-full pb-[100px]">
         {/* Top Title */}
         <div className="absolute top-10 w-full flex justify-center z-10">
           <h1 className="text-4xl sm:text-6xl font-bold text-red-500 message-animate font-dancing">
