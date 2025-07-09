@@ -21,10 +21,7 @@ export default function Home() {
         </div>
 
         {/* Centered Message */}
-        <div
-          className="flex items-center justify-center"
-          style={{ height: "calc(100vh - 100px)" }}
-        >
+        <div className="flex items-center justify-center">
           <Typewriter text="Just wanted to send you good health and roses. Hope you feel better soon." />
         </div>
 
