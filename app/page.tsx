@@ -12,7 +12,7 @@ export default function Home() {
         ></link>
       </Head>
 
-      <main className="relative min-h-screen w-full pb-[100px]">
+      <main className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden px-4">
         {/* Top Title */}
         <div className="absolute top-10 w-full flex justify-center z-10">
           <h1 className="text-4xl sm:text-6xl font-bold text-red-500 message-animate font-dancing">
@@ -20,9 +20,45 @@ export default function Home() {
           </h1>
         </div>
 
-        {/* Centered Message */}
-        <div className="flex items-center justify-center">
+        {/* Center Content */}
+        <div className="flex flex-col items-center justify-center gap-6 z-10">
+          {/* Typewriter Message */}
           <Typewriter text="Just wanted to send you good health and roses. Hope you feel better soon." />
+
+          {/* Roses just below the message */}
+        </div>
+        <div className="relative w-full max-w-md h-[100px] pointer-events-none overflow-visible">
+          {Array.from({ length: 50 }).map((_, i) => {
+            const delay = i * 0.05;
+            const scale = 0.6 + Math.random() * 0.6;
+            const leftOffset = Math.random() * 100;
+            const swayDuration = 2 + Math.random() * 3;
+            const swayDelay = Math.random() * 2;
+
+            return (
+              <div
+                key={i}
+                style={{
+                  animation: `growIn 1s ease-out ${delay}s forwards`,
+                  opacity: 0,
+                  transform: `scale(${scale})`,
+                  left: `${leftOffset}%`,
+                }}
+                className="absolute bottom-0"
+              >
+                <img
+                  src="/rose.svg"
+                  alt="Rose"
+                  style={{
+                    width: `${scale * 40}px`,
+                    height: "auto",
+                    animation: `sway ${swayDuration}s ease-in-out ${swayDelay}s infinite`,
+                    transformOrigin: "bottom center",
+                  }}
+                />
+              </div>
+            );
+          })}
         </div>
 
         {/* Falling Petals */}
@@ -47,42 +83,6 @@ export default function Home() {
                   src="/rose-petal.svg"
                   className="w-5 sm:w-6 opacity-80"
                   alt="petal"
-                />
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Roses at the bottom */}
-        <div className="absolute bottom-0 w-full h-[100px] pointer-events-none">
-          {Array.from({ length: 50 }).map((_, i) => {
-            const delay = i * 0.05;
-            const scale = 0.6 + Math.random() * 0.6;
-            const leftOffset = Math.random() * 100;
-
-            const swayDuration = 2 + Math.random() * 3; // 2–5s duration
-            const swayDelay = Math.random() * 2; // 0–2s delay
-
-            return (
-              <div
-                key={i}
-                style={{
-                  animation: `growIn 1s ease-out ${delay}s forwards`,
-                  opacity: 0,
-                  transform: `scale(${scale})`,
-                  left: `${leftOffset}%`,
-                }}
-                className="absolute bottom-0"
-              >
-                <img
-                  src="/rose.svg"
-                  alt="Rose"
-                  style={{
-                    width: `${scale * 40}px`,
-                    height: "auto",
-                    animation: `sway ${swayDuration}s ease-in-out ${swayDelay}s infinite`,
-                    transformOrigin: "bottom center",
-                  }}
                 />
               </div>
             );
