@@ -1,0 +1,20 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style>
+    .bloom {
+      transform-origin: 100px 100px;
+      animation: bloomIn 2s ease-out forwards;
+    }
+
+    @keyframes bloomIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+  <g class="bloom" fill="#C2185B">
+    <path d="M100,100 q-10,-30 20,-40 q10,0 15,10 q5,10 -10,25 q10,-5 20,0 q10,10 0,20 q-10,10 -30,0 q10,20 -5,30 q-15,10 -25,-10 q-10,10 -20,5 q-15,-10 -5,-25 q10,-10 25,-10 q-25,-10 -10,-30 q10,-15 30,-5 Z" fill="#e53967"/>
+    <path d="M100,100 q-20,-20 10,-30 q15,-5 20,5 q5,10 -5,20 q10,-5 15,5 q5,10 -5,15 q-10,10 -25,0 q10,10 0,20 q-10,10 -20,0 q-10,-10 0,-20 q-10,10 -20,0 q-10,-10 0,-20 q10,-10 25,-5 Z" fill="#d81b60" opacity="0.8"/>
+    <path d="M100,100 q-15,-10 0,-20 q10,-5 15,0 q5,5 -2,10 q5,0 10,5 q5,5 -5,10 q-10,5 -20,0 q5,10 -5,15 q-10,5 -15,-5 q-5,-10 5,-15 q-10,0 -10,-10 q0,-10 10,-10 q5,0 10,5 Z" fill="#ad1457" opacity="0.7"/>
+    <circle cx="100" cy="100" r="6" fill="#880e4f"/>
+  </g>
+</svg>

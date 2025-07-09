@@ -1,0 +1,32 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <style>
+    .petal {
+      transform-origin: center;
+      animation: sway 4s ease-in-out infinite;
+    }
+    .grow {
+      animation: growIn 1.5s ease-out forwards;
+      transform: scale(0);
+      transform-origin: bottom center;
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(2deg); }
+    }
+
+    @keyframes growIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+  <g class="grow">
+    <path class="petal" fill="#C2185B" d="M32 2c5 2 9 5 12 9 3 4 4 9 2 14-2 5-6 9-11 10-2 1-4 1-6 0C22 34 17 30 15 25s-1-10 2-14c3-4 7-7 12-9z"/>
+    <path class="petal" fill="#AD1457" d="M20 24c-1-5 1-9 4-13s8-6 12-6c-2 0-6 1-9 4-4 4-6 10-5 15 1 6 5 10 10 12-5-2-10-6-12-12z"/>
+    <path class="petal" fill="#D81B60" d="M32 10c-4 2-7 6-8 10-1 4 0 8 2 11 2 2 5 4 8 4 3 0 6-2 8-4 2-3 3-7 2-11-1-4-4-8-8-10z"/>
+    <path fill="#388E3C" d="M32 44c-1 0-2 1-2 2v14a2 2 0 1 0 4 0V46c0-1-1-2-2-2z"/>
+    <path fill="#2E7D32" d="M32 44c.5 1 1 2 1 3v13a2 2 0 0 0 1-1V46c0-1-.5-2-2-2z"/>
+    <path fill="#43A047" d="M20 42c2 4 7 6 12 6s10-2 12-6c-4 1-8 2-12 2s-8-1-12-2z"/>
+  </g>
+</svg>

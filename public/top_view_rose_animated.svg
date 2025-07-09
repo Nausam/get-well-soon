@@ -1,0 +1,34 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .bloom {
+      transform-origin: 50% 50%;
+      animation: bloomIn 1.8s ease-out forwards;
+    }
+
+    @keyframes bloomIn {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+  <defs>
+    <radialGradient id="roseGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4d6d"/>
+      <stop offset="100%" stop-color="#b3003c"/>
+    </radialGradient>
+  </defs>
+  <g class="bloom" fill="url(#roseGradient)">
+    <circle cx="50" cy="50" r="5"/>
+    <circle cx="50" cy="50" r="10" fill-opacity="0.9"/>
+    <circle cx="50" cy="50" r="15" fill-opacity="0.8"/>
+    <circle cx="50" cy="50" r="20" fill-opacity="0.7"/>
+    <circle cx="50" cy="50" r="25" fill-opacity="0.6"/>
+    <circle cx="50" cy="50" r="30" fill-opacity="0.5"/>
+  </g>
+</svg>
