@@ -12,7 +12,7 @@ export default function Home() {
         ></link>
       </Head>
 
-      <main className="relative h-screen w-full overflow-hidden pb-[100px]">
+      <main className="relative h-screen w-full pb-[100px]">
         {/* Top Title */}
         <div className="absolute top-10 w-full flex justify-center z-10">
           <h1 className="text-4xl sm:text-6xl font-bold text-red-500 message-animate font-dancing">
@@ -21,7 +21,10 @@ export default function Home() {
         </div>
 
         {/* Centered Message */}
-        <div className="h-full flex flex-col items-center justify-center z-10">
+        <div
+          className="flex items-center justify-center"
+          style={{ height: "calc(100vh - 100px)" }}
+        >
           <Typewriter text="Just wanted to send you good health and roses. Hope you feel better soon." />
         </div>
 
